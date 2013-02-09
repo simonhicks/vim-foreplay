@@ -1,0 +1,122 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+<Plug>ForeplayDjump	plugin/foreplay.vim	/^nnoremap <silent> <Plug>ForeplayDjump :<C-U>exe <SID>Edit('edit', expand('<cword>'))<CR>$/;"	m
+<Plug>ForeplayDsplit	plugin/foreplay.vim	/^nnoremap <silent> <Plug>ForeplayDsplit :<C-U>exe <SID>Edit('split', expand('<cword>'))<CR>$/;"	m
+<Plug>ForeplayDtabjump	plugin/foreplay.vim	/^nnoremap <silent> <Plug>ForeplayDtabjump :<C-U>exe <SID>Edit('tabedit', expand('<cword>'))<CR>$/;"	m
+<Plug>ForeplayEdit	plugin/foreplay.vim	/^nnoremap <silent> <Plug>ForeplayEdit   :<C-U>set opfunc=<SID>editop<CR>g@$/;"	m
+<Plug>ForeplayFilter	plugin/foreplay.vim	/^nnoremap <silent> <Plug>ForeplayFilter :<C-U>set opfunc=<SID>filterop<CR>g@$/;"	m
+<Plug>ForeplayK	plugin/foreplay.vim	/^nnoremap <Plug>ForeplayK :<C-R>=<SID>K()<CR><CR>$/;"	m
+<Plug>ForeplayPrint	plugin/foreplay.vim	/^nnoremap <silent> <Plug>ForeplayPrint  :<C-U>set opfunc=<SID>printop<CR>g@$/;"	m
+<Plug>ForeplayPrintLast	plugin/foreplay.vim	/^nnoremap <silent> <Plug>ForeplayPrintLast :exe <SID>print_last()<CR>$/;"	m
+<Plug>ForeplayPrompt	plugin/foreplay.vim	/^nnoremap          <Plug>ForeplayPrompt :exe <SID>inputeval()<CR>$/;"	m
+<Plug>ForeplayRecall	plugin/foreplay.vim	/^noremap!          <Plug>ForeplayRecall <C-R>=<SID>recall()<CR>$/;"	m
+<Plug>ForeplaySource	plugin/foreplay.vim	/^nnoremap <Plug>ForeplaySource :Source <C-R><C-W><CR>$/;"	m
+Alternate	plugin/foreplay.vim	/^function! s:Alternate(cmd) abort$/;"	f
+Apropos	plugin/foreplay.vim	/^function! s:Apropos(pattern) abort$/;"	f
+Connect	plugin/foreplay.vim	/^function! s:Connect(arg)$/;"	f
+Edit	plugin/foreplay.vim	/^function! s:Edit(cmd, keyword) abort$/;"	f
+Eval	plugin/foreplay.vim	/^function! s:Eval(bang, line1, line2, count, args) abort$/;"	f
+ForeplayConnect	plugin/foreplay.vim	/^command! -bar -complete=customlist,s:connect_complete -nargs=? ForeplayConnect :exe s:Connect(<q-args>)$/;"	c
+GF	plugin/foreplay.vim	/^function! s:GF(cmd, file) abort$/;"	f
+K	plugin/foreplay.vim	/^function! s:K()$/;"	f
+Last	plugin/foreplay.vim	/^function! s:Last(bang, count) abort$/;"	f
+Lookup	plugin/foreplay.vim	/^function! s:Lookup(ns, macro, arg) abort$/;"	f
+Require	plugin/foreplay.vim	/^function! s:Require(bang, ns)$/;"	f
+actually_input	plugin/foreplay.vim	/^function! s:actually_input(...)$/;"	f
+alternates	plugin/foreplay.vim	/^function! s:alternates() abort$/;"	f
+buffer_path	plugin/foreplay.vim	/^function! s:buffer_path(...) abort$/;"	f
+buffers#open_buffer	plugin/foreplay/buffers.vim	/^function! buffers#open_buffer()$/;"	f
+clear_result_buffer	plugin/foreplay.vim	/^function! s:clear_result_buffer()$/;"	f
+client	plugin/foreplay.vim	/^function! s:client() abort$/;"	f
+cmdwinenter	plugin/foreplay.vim	/^function! s:cmdwinenter()$/;"	f
+cmdwinleave	plugin/foreplay.vim	/^function! s:cmdwinleave()$/;"	f
+connect_complete	plugin/foreplay.vim	/^function! s:connect_complete(A, L, P)$/;"	f
+create_result_buffer	plugin/foreplay/buffers.vim	/^function! s:create_result_buffer()$/;"	f
+decode_url	plugin/foreplay.vim	/^function! s:decode_url(url) abort$/;"	f
+editop	plugin/foreplay.vim	/^function! s:editop(type) abort$/;"	f
+eval	plugin/foreplay.vim	/^function! s:eval(expr, ...) abort$/;"	f
+filterop	plugin/foreplay.vim	/^function! s:filterop(type) abort$/;"	f
+foreplay#client	plugin/foreplay.vim	/^function! foreplay#client() abort$/;"	f
+foreplay#eval	plugin/foreplay.vim	/^function! foreplay#eval(expr) abort$/;"	f
+foreplay#eval_complete	plugin/foreplay.vim	/^function! foreplay#eval_complete(A, L, P) abort$/;"	f
+foreplay#evalparse	plugin/foreplay.vim	/^function! foreplay#evalparse(expr, ...) abort$/;"	f
+foreplay#evalprint	plugin/foreplay.vim	/^function! foreplay#evalprint(expr) abort$/;"	f
+foreplay#findfile	plugin/foreplay.vim	/^function! foreplay#findfile(path) abort$/;"	f
+foreplay#findresource	plugin/foreplay.vim	/^function! foreplay#findresource(resource) abort$/;"	f
+foreplay#input_host_port	plugin/foreplay.vim	/^function! foreplay#input_host_port()$/;"	f
+foreplay#jar_contents	plugin/foreplay.vim	/^function! foreplay#jar_contents(path) abort$/;"	f
+foreplay#local_client	plugin/foreplay.vim	/^function! foreplay#local_client(...)$/;"	f
+foreplay#ns	plugin/foreplay.vim	/^function! foreplay#ns() abort$/;"	f
+foreplay#ns_complete	plugin/foreplay.vim	/^function! foreplay#ns_complete(A, L, P) abort$/;"	f
+foreplay#omnicomplete	plugin/foreplay.vim	/^function! foreplay#omnicomplete(findstart, base) abort$/;"	f
+foreplay#quickfix_for	plugin/foreplay.vim	/^function! foreplay#quickfix_for(stacktrace) abort$/;"	f
+foreplay#skip	plugin/foreplay.vim	/^let foreplay#skip = 'synIDattr(synID(line("."),col("."),1),"name") =~? "comment\\\\|string\\\\|char"'$/;"	v
+foreplay#source	plugin/foreplay.vim	/^function! foreplay#source(symbol) abort$/;"	f
+foreplay_alternate	plugin/foreplay.vim	/^augroup foreplay_alternate$/;"	a
+foreplay_completion	plugin/foreplay.vim	/^augroup foreplay_completion$/;"	a
+foreplay_connect	plugin/foreplay.vim	/^augroup foreplay_connect$/;"	a
+foreplay_doc	plugin/foreplay.vim	/^augroup foreplay_doc$/;"	a
+foreplay_eval	plugin/foreplay.vim	/^augroup foreplay_eval$/;"	a
+foreplay_file_type	plugin/foreplay.vim	/^augroup foreplay_file_type$/;"	a
+foreplay_go_to_file	plugin/foreplay.vim	/^augroup foreplay_go_to_file$/;"	a
+foreplay_leiningen	plugin/foreplay.vim	/^augroup foreplay_leiningen$/;"	a
+foreplay_require	plugin/foreplay.vim	/^augroup foreplay_require$/;"	a
+foreplay_source	plugin/foreplay.vim	/^augroup foreplay_source$/;"	a
+g:foreplay#output_in_buffer	plugin/foreplay.vim	/^  let g:foreplay#output_in_buffer = 0$/;"	v
+g:foreplay#result_buffer_location	plugin/foreplay/buffers.vim	/^  let g:foreplay#result_buffer_location = 'top'$/;"	v
+g:foreplay#result_buffer_size	plugin/foreplay/buffers.vim	/^  let g:foreplay#result_buffer_size = 10$/;"	v
+g:loaded_buffers	plugin/foreplay/buffers.vim	/^let g:loaded_buffers = 1$/;"	v
+g:loaded_foreplay	plugin/foreplay.vim	/^let g:loaded_foreplay = 1$/;"	v
+histswap	plugin/foreplay.vim	/^function! s:histswap(list) abort$/;"	f
+hunt	plugin/foreplay.vim	/^function! s:hunt(start, anchor) abort$/;"	f
+input	plugin/foreplay.vim	/^function! s:input(default) abort$/;"	f
+inputclose	plugin/foreplay.vim	/^function! s:inputclose() abort$/;"	f
+inputeval	plugin/foreplay.vim	/^function! s:inputeval() abort$/;"	f
+inputlist	plugin/foreplay.vim	/^function! s:inputlist(label, entries)$/;"	f
+leiningen_connect	plugin/foreplay.vim	/^function! s:leiningen_connect()$/;"	f
+leiningen_init	plugin/foreplay.vim	/^function! s:leiningen_init() abort$/;"	f
+oneoff.eval	plugin/foreplay.vim	/^function! s:oneoff.eval(expr, options) dict abort$/;"	f
+oneoff.path	plugin/foreplay.vim	/^function! s:oneoff.path() dict abort$/;"	f
+oneoff.require	plugin/foreplay.vim	/^function! s:oneoff.require(symbol)$/;"	f
+open_result_buffer_window	plugin/foreplay/buffers.vim	/^function! s:open_result_buffer_window(buf_num)$/;"	f
+opfunc	plugin/foreplay.vim	/^function! s:opfunc(type) abort$/;"	f
+output_response	plugin/foreplay.vim	/^function! s:output_response(response) abort$/;"	f
+print_last	plugin/foreplay.vim	/^function! s:print_last() abort$/;"	f
+print_text	plugin/foreplay.vim	/^function! s:print_text(text)$/;"	f
+printop	plugin/foreplay.vim	/^function! s:printop(type) abort$/;"	f
+protos	plugin/foreplay.vim	/^function! s:protos()$/;"	f
+qfentry	plugin/foreplay.vim	/^function! s:qfentry(entry) abort$/;"	f
+qfhistory	plugin/foreplay.vim	/^function! s:qfhistory() abort$/;"	f
+qsym	plugin/foreplay.vim	/^function! s:qsym(symbol)$/;"	f
+recall	plugin/foreplay.vim	/^function! s:recall() abort$/;"	f
+register_connection	plugin/foreplay.vim	/^function! s:register_connection(conn, ...)$/;"	f
+repl.eval	plugin/foreplay.vim	/^function! s:repl.eval(expr, options) dict abort$/;"	f
+repl.includes_file	plugin/foreplay.vim	/^function! s:repl.includes_file(file) dict abort$/;"	f
+repl.path	plugin/foreplay.vim	/^function! s:repl.path() dict abort$/;"	f
+repl.require	plugin/foreplay.vim	/^function! s:repl.require(lib) dict abort$/;"	f
+result_buffer_is_visible	plugin/foreplay/buffers.vim	/^function! s:result_buffer_is_visible()$/;"	f
+s:buf_name	plugin/foreplay/buffers.vim	/^let s:buf_name = "__RESULT__"$/;"	v
+s:history	plugin/foreplay.vim	/^  let s:history = []$/;"	v
+s:jar_contents	plugin/foreplay.vim	/^let s:jar_contents = {}$/;"	v
+s:leiningen_repl_ports	plugin/foreplay.vim	/^  let s:leiningen_repl_ports = {}$/;"	v
+s:oneoff	plugin/foreplay.vim	/^let s:oneoff = {}$/;"	v
+s:oneoff_err	plugin/foreplay.vim	/^let s:oneoff_err = tempname()$/;"	v
+s:oneoff_ex	plugin/foreplay.vim	/^let s:oneoff_ex  = tempname()$/;"	v
+s:oneoff_in	plugin/foreplay.vim	/^let s:oneoff_in  = tempname()$/;"	v
+s:oneoff_out	plugin/foreplay.vim	/^let s:oneoff_out = tempname()$/;"	v
+s:oneoff_pr	plugin/foreplay.vim	/^let s:oneoff_pr  = tempname()$/;"	v
+s:oneoff_stk	plugin/foreplay.vim	/^let s:oneoff_stk = tempname()$/;"	v
+s:qffiles	plugin/foreplay.vim	/^  let s:qffiles = {}$/;"	v
+s:repl	plugin/foreplay.vim	/^let s:repl = {"requires": {}}$/;"	v
+s:repl_paths	plugin/foreplay.vim	/^  let s:repl_paths = {}$/;"	v
+s:repls	plugin/foreplay.vim	/^  let s:repls = []$/;"	v
+setup_eval	plugin/foreplay.vim	/^function! s:setup_eval() abort$/;"	f
+setup_historical	plugin/foreplay.vim	/^function! s:setup_historical()$/;"	f
+setup_require	plugin/foreplay.vim	/^function! s:setup_require()$/;"	f
+str	plugin/foreplay.vim	/^function! s:str(string)$/;"	f
+temp_response	plugin/foreplay.vim	/^function! s:temp_response(response) abort$/;"	f
+tons	plugin/foreplay.vim	/^function! s:tons(path) abort$/;"	f

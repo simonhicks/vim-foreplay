@@ -6,6 +6,10 @@ if exists("g:loaded_foreplay") || v:version < 700 || &cp
 endif
 let g:loaded_foreplay = 1
 
+if !exists("g:foreplay#output_in_buffer")
+  let g:foreplay#output_in_buffer = 0
+endif
+
 " File type {{{1
 
 augroup foreplay_file_type
@@ -413,14 +417,32 @@ function! foreplay#quickfix_for(stacktrace) abort
   return qflist
 endfunction
 
+function! s:clear_result_buffer()
+  let init = winnr()
+  call buffers#open_buffer()
+  normal! ggVGd
+  exe init . " wincmd w"
+  return ''
+endfunction
+
+function! s:print_text(text)
+  if g:foreplay#output_in_buffer == 1
+    call buffers#open_buffer()
+    call append(line('$'), a:text)
+    return ''
+  else
+    echo a:text
+  endif
+endfunction
+
 function! s:output_response(response) abort
   if get(a:response, 'err', '') !=# ''
     echohl ErrorMSG
-    echo substitute(a:response.err, '\r\|\n$', '', 'g')
+    call s:print_text(substitute(a:response.err, '\r\|\n$', '', 'g'))
     echohl NONE
   endif
   if get(a:response, 'out', '') !=# ''
-    echo substitute(a:response.out, '\r\|\n$', '', 'g')
+    call s:print_text(substitute(a:response.out, '\r\|\n$', '', 'g'))
   endif
 endfunction
 
@@ -512,7 +534,10 @@ endfunction
 
 function! foreplay#evalprint(expr) abort
   try
-    echo foreplay#eval(a:expr)
+    if g:foreplay#output_in_buffer == 1
+      call s:clear_result_buffer()
+    endif
+    call s:print_text(foreplay#eval(a:expr))
   catch /^Clojure:/
   endtry
   return ''
