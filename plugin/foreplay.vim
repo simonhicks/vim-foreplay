@@ -428,7 +428,10 @@ endfunction
 function! s:print_text(text)
   if g:foreplay#output_in_buffer == 1
     call buffers#open_buffer()
-    call append(line('$'), a:text)
+    let l:lines = split(a:text, '\r\|\n')
+    for l:line in l:lines
+      call append(line('$'), l:line)
+    endfor
     return ''
   else
     echo a:text
@@ -439,10 +442,12 @@ function! s:output_response(response) abort
   if get(a:response, 'err', '') !=# ''
     echohl ErrorMSG
     call s:print_text(substitute(a:response.err, '\r\|\n$', '', 'g'))
+    "call s:print_text(substitute(a:response.err, '\r\|\n', '', 'g'))
     echohl NONE
   endif
   if get(a:response, 'out', '') !=# ''
     call s:print_text(substitute(a:response.out, '\r\|\n$', '', 'g'))
+    "call s:print_text(substitute(a:response.out, '\r\|\n', '', 'g'))
   endif
 endfunction
 
